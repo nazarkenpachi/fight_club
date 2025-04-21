@@ -1,4 +1,3 @@
-import { Col } from "react-bootstrap";
 import { GeoAlt, Calendar, ArrowRightCircle } from "react-bootstrap-icons";
 
 export const ClubCard = ({name, time, address, city, imgUrl}) => {

@@ -393,3 +393,56 @@ nav.navbar {
 .club-infobx:hover {
   transform: scale(1.05);
 }
+
+ /************ AboutPage CSS ************/
+
+.about {
+  padding: 80px;
+  position: relative;
+  background-color: black;
+  /* overflow: hidden; */
+}
+
+.about-imgbx img{
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+
+.about-left-text {
+  top: 150px;
+  position: sticky;
+}
+
+.about-infobx {
+  position: relative;
+  border-radius: 5px;
+  background-color:  rgba(29, 29, 29, 0.6);
+  margin-bottom: 7rem;
+}
+
+.about-txtx {
+  padding: 10px;
+}
+.about-txtx p, .about-left-text p {
+  line-height: 154%;
+  font-size: 1.4rem;
+}
+
+.about-left-text h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.cursor-follower-bg {
+  inset: 0;
+  background: radial-gradient(200px circle at var(--x) var(--y), #34261d, transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about > *:not(.cursor-follower-bg) {
+  position: relative;
+  z-index: 1;
+}
+
