@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
 import logo from '../assets/logo.PNG';
-import navIcon1 from '../assets/nav-icon1.svg';
 import navIcon2 from '../assets/nav-icon2.svg';
 import navIcon3 from '../assets/nav-icon3.svg';
 
@@ -47,7 +46,6 @@ function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href=""><img src={navIcon1} alt="socialImg"/></a>
               <a href=""><img src={navIcon2} alt="socialImg"/></a>
               <a href=""><img src={navIcon3} alt="socialImg"/></a>
             </div>
