@@ -460,6 +460,10 @@ nav.navbar {
   height: auto;
 }
 
+.footer h4 {
+  color: #FF4500;
+}
+
 .footer button {
   padding: 22px 60px;
 }
@@ -468,29 +472,19 @@ nav.navbar {
   position: relative;
 }
 
-.footer-col ul {
-  margin-top: 10px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-
-.footer-col ul li {
-  cursor: pointer;
-  transition: all 0.4s;
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.footer-col ul li:hover {
-  color: #FF4500;
-}
-
 .footer-col h3 {
   margin-bottom: 15px;
   font-weight: 700;
-  color: #4682B4;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.footer-col h3:hover {
+  color: #FF4500;
+}
+
+.footer-col p {
+  color: rgb(255, 255, 255, .5);
 }
 
 .footer-down {
@@ -646,4 +640,9 @@ nav.navbar {
   to{
     transform: translateX(-50%);
   }
+}
+
+.active {
+  background-color: #fff;
+  color: black;
 }

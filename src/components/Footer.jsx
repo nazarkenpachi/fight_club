@@ -1,30 +1,23 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import logo from "../assets/logo.PNG";
 import { FooterCol } from "./FooterCol";
+import { ClubsInfo as clubs } from "../ClubsInfo";
 
 export const Footer = () => {
-   const items = [
-      {
-         id: "0",
-         title: "Про нас",
-         list: ['Amogus']
-      },
-      {
-         id: "1",
-         title: "Гостям",
-         list: ['Amogus', 'Amogus', 'Amogus', 'Amogus', 'Amogus', 'Amogus', 'Amogus']
-      },
-      {
-         id: "2",
-         title: "Спеціалістам",
-         list: ['Amogus', 'Amogus', 'Amogus', 'Amogus', 'Amogus']
-      },
-      {
-         id: "3",
-         title: "Партнерам",
-         list: ['Amogus', 'Amogus', 'Amogus', 'Amogus']
-      },
-   ]
+
+   const groupedClubs = {
+      Київ: [],
+      Львів: [],
+      Козятин: [],
+      Баранівка: [],
+    };
+    
+    clubs.forEach((club) => {
+      if (groupedClubs[club.city]) {
+        groupedClubs[club.city].push(club);
+      }
+    });
+   
    return <section className="footer" id="footer">
       <Container>
       <Row className="justify-content-between align-items-center">
@@ -36,12 +29,17 @@ export const Footer = () => {
          </Col>
       </Row>
          <Row>
-            {items.map(item => (
-               <Col id={item.id} md={3}>
-                  <FooterCol 
-                  title={item.title}
-                  items={item.list}
+            {Object.entries(groupedClubs).map(([city, clubList], index) => (
+               <Col key={index} md={3}>
+                  <h4>{city}</h4>
+                  {clubList.map((club) => (
+                  <FooterCol
+                     key={club.id}
+                     name={club.name}
+                     address={club.address}
+                     city={club.city}
                   />
+                  ))}
                </Col>
             ))}
          </Row>
