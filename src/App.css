@@ -156,7 +156,7 @@ nav.navbar {
  .social-icon a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
  }
- .navbar-text button {
+ .navbar-text button, .footer button {
    font-weight: 700;
    color: #fff;
    border: 1px solid #fff;
@@ -170,7 +170,7 @@ nav.navbar {
  .navbar-text button span {
    z-index: 1;
  }
- .navbar-text button::before {
+ .navbar-text button::before, .footer button::before {
    content: "";
    width: 0%;
    height: 100%;
@@ -181,10 +181,10 @@ nav.navbar {
    z-index: -1;
    transition: 0.3s ease-in-out;
  }
- .navbar-text button:hover {
+ .navbar-text button:hover, .footer button:hover {
    color: #121212;
  }
- .navbar-text button:hover::before {
+ .navbar-text button:hover::before, .footer button:hover::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -436,7 +436,7 @@ nav.navbar {
 
 .cursor-follower-bg {
   inset: 0;
-  background: radial-gradient(200px circle at var(--x) var(--y), #34261d, transparent);
+  background: radial-gradient(200px circle at var(--x) var(--y), #523632, transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -446,3 +446,51 @@ nav.navbar {
   z-index: 1;
 }
 
+.footer {
+  position: relative;
+  padding: 25px;
+}
+
+.footer img {
+  width: 25%;
+  height: auto;
+}
+
+.footer button {
+  padding: 22px 60px;
+}
+
+.footer-col {
+  position: relative;
+}
+
+.footer-col ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.footer-col ul li {
+  cursor: pointer;
+  transition: all 0.4s;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer-col ul li:hover {
+  color: #5f5846;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #5f5846;
+}
+
+.footer-down {
+  background-color: black;
+  padding: 25px;
+  font-weight: 600;
+}
